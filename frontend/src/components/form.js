@@ -12,7 +12,7 @@ const ReviewForm = ({ onAddReview }) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('/users/review', { email, text, user, sentiment, rating });
+      const response = await axios.post('https://tech-crew-api.onrender.com/users/review', { email, text, user, sentiment, rating });
       onAddReview(response.data);
       setText('');
       setUser('');

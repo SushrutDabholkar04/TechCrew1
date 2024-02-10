@@ -32,7 +32,7 @@ export default function Menu() {
         window.location.href = "/login";
         return;
       }
-      let response = await fetch("/data/foodData", {
+      let response = await fetch("https://tech-crew-api.onrender.com/data/foodData", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',

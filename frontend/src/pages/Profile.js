@@ -14,7 +14,7 @@ export default function Profile() {
   const fetchMyOrder = async () => {
     if (user && user.email) {
       try {
-        const response = await fetch("/order/myOrder", {
+        const response = await fetch("https://tech-crew-api.onrender.com/order/myOrder", {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

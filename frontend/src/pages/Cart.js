@@ -16,7 +16,7 @@ export default function Cart() {
     try {
      
     let userEmail=user.email
-      const response1=await fetch("/order/orderData",{
+      const response1=await fetch("https://tech-crew-api.onrender.com/order/orderData",{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

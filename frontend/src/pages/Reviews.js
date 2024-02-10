@@ -12,7 +12,7 @@ const Review = () => {
   const { user } = useAuthContext();
 
   useEffect(() => {
-    axios.get('/users/review')
+    axios.get('https://tech-crew-api.onrender.com/users/review')
       .then(response => reviewDispatch({ type: 'SET_REVIEWS', payload: response.data }))
       .catch(error => console.error('Error fetching reviews:', error));
   }, [reviewDispatch]);
@@ -30,7 +30,7 @@ const Review = () => {
   
       console.log('User ID:', user._id); 
   
-      await axios.delete(`/users/review/${reviewId}`, {
+      await axios.delete(`https://tech-crew-api.onrender.com/users/review/${reviewId}`, {
         headers: {
           Authorization: `Bearer ${user.token}`,
         },
